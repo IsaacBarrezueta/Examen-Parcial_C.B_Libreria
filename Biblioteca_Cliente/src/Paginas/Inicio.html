@@ -1,0 +1,39 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<div class="dashboard">
+    <h1>Panel de Control - Biblioteca</h1>
+
+    <div class="stats-container">
+        <div class="stat-card" id="libros-total">
+            <i class="fas fa-book"></i>
+            <h3>Total Libros</h3>
+            <p class="stat-number">0</p>
+        </div>
+        <div class="stat-card" id="estudiantes-total">
+            <i class="fas fa-users"></i>
+            <h3>Estudiantes Registrados</h3>
+            <p class="stat-number">0</p>
+        </div>
+        <div class="stat-card" id="prestamos-activos">
+            <i class="fas fa-clock"></i>
+            <h3>Préstamos Activos</h3>
+            <p class="stat-number">0</p>
+        </div>
+        <div class="stat-card" id="prestamos-vencidos">
+            <i class="fas fa-exclamation-circle"></i>
+            <h3>Préstamos Vencidos</h3>
+            <p class="stat-number">0</p>
+        </div>
+    </div>
+
+    <div class="quick-actions">
+        <h2>Acciones Rápidas</h2>
+        <div class="actions-grid">
+            <button id="btn-reporte" class="action-button">
+                <i class="fas fa-file-alt"></i>
+                Generar Reporte
+            </button>
+        </div>
+    </div>
+
+</div>

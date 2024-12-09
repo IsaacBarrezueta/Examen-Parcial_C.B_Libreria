@@ -1,0 +1,101 @@
+<!-- src/Paginas/Libros.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Libros</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <h1>Gestión de Libros</h1>
+    
+    <div class="actions">
+        <button id="btn-add">Registrar Libro</button>
+        <div class="search">
+            <input type="text" id="filtro" placeholder="Buscar por nombre o autor...">
+            <button id="btn-filtro">Buscar</button>
+        </div>
+    </div>
+
+    <h2>Lista de Libros</h2>
+    <table id="libros-table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Categoría</th>
+                <th>Editorial</th>
+                <th>Nombre</th>
+                <th>Autor</th>
+                <th>Año de Publicación</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos se llenarán dinámicamente -->
+        </tbody>
+    </table>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Registrar Libro</h2>
+                <button id="btn-close">&times;</button>
+            </div>
+            <form id="crearForm">
+                <div class="form-group">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" name="codigo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="Literatura">Literatura</option>
+                        <option value="Salud">Salud</option>
+                        <option value="Informatica">Informática</option>
+                        <option value="Erotico">Erótico</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="editorial">Editorial:</label>
+                    <input type="text" id="editorial" name="editorial" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="autor">Autor:</label>
+                    <input type="text" id="autor" name="autor" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="anio_publicacion">Año de Publicación:</label>
+                    <input type="number" id="anio_publicacion" name="anio_publicacion" min="1000" max="9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="libro">Libro</option>
+                        <option value="revista">Revista</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="btn">Crear Libro</button>
+                    <button type="button" id="btn-cancel">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../Scripts/LibroScript.ts"></script>
+</body>
+</html>
